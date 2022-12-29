@@ -51,7 +51,7 @@ const Add = (props) => {
 
   useEffect(() => {
     setTimeout(() => {
-      showWarning && setShowWarning(false);
+      setShowWarning(false);
     }, 3000);
   }, [showWarning]);
 
