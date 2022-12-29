@@ -1,0 +1,93 @@
+.todo {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1vh 1vw;
+  margin-block: 1vh;
+  border-block: 1px solid #CCCCCC;
+  transition: opacity .4s ease-in-out;
+}
+
+.todo.completed {
+  opacity: .4;
+}
+
+.todo .done {
+  display: flex;
+  align-items: center;
+  margin-right: .5vw;
+}
+
+.todo .details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: .5vh .5vw;
+}
+
+.todo .details .title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.todo .details .desc {
+  font-size: 13px;
+}
+
+.todo .active {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #339900;
+  margin-inline: .5vw;
+  cursor: pointer;
+}
+
+.todo .active.not-active {
+  background-color: transparent;
+  border: 1px solid #339900;
+}
+
+.todo .buttons {
+  display: flex;
+  align-items: center;
+  padding: .5vh .5vw;
+}
+
+.todo .buttons button {
+  padding: 1vh 1vw;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #000000;
+  font-size: 14px;
+}
+
+.todo .buttons button:first-child {
+  margin-right: .5vw;
+  transition: 
+    box-shadow .6s ease-in-out,
+    color .4s ease-in-out;
+}
+
+.todo .buttons button:first-child:hover {
+  box-shadow: 0 -1px 0 0 #3399FF; /* Border top */
+  box-shadow: 1px 0 0 0 #3399FF; /* Border right */
+  box-shadow: 0 1px 0 0 #3399FF; /* Border bottom */
+  box-shadow: -1px 0 0 0 #3399FF; /* Border left */
+  box-shadow: 0 0 0 1px #3399FF; /* All the borders by using the spread properties */
+  color: #3399FF;
+}
+
+.todo .buttons button:last-child {
+  transition: 
+    background-color .6s ease-in-out,
+    color .4s ease-in-out;
+}
+
+
+.todo .buttons button:last-child:hover {
+  background-color: #3399FF;
+  color: #FFFFFF;
+}

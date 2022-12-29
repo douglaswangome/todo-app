@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import Header from './components/Header';
+import Add from './components/modals/Add';
+import Todo from "./components/Todo";
+import sampleTodos from './sampletodos';
 
-function App() {
+const App = () => {
+  const [todos, setTodos] = useState(sampleTodos);
+  const [count, setCount] = useState(0);
+  const [showAddModal, setShowAddModal] = useState(false);
+
+  const addCount = () => {
+    setCount(prevCount => prevCount + 1);
+  }
+
+  const todo = todos.map(currentTodo => <Todo key={currentTodo.id} {...currentTodo} addCount={addCount} />);
+
+  useEffect(() => {
+    setTodos(sampleTodos);
+  }, [count])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <Header />
+    <div className="app">
+      {todo}
+      <button className="add-todo" onClick={() => setShowAddModal(true)}>
+        <span>Add To-Do</span>
+      </button>
     </div>
+    <Add addCount={addCount} show={showAddModal} hideModal={() => setShowAddModal(false)} />
+    </>
   );
 }
 
-export default App;
+export default App

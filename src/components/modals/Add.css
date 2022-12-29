@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+.add {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: brightness(.3);
+  transition: margin-left 1s ease-in-out;
+}
+
+.add.inactive {
+  margin-left: -100%;
+}
+
+.add .add-form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  background-color: #FFFFFF;
+  padding: 1vh 1vw;
+}
+
+.add .add-form span.title {
+  font-family: "Courgette";
+  font-size: 40px;
+  margin-inline: auto;
+}
+
+.add .add-form div {
+  display: flex;
+  flex-direction: column;
+  margin-block: .6vh;
+  padding: 1vh 1vw;
+}
+
+.add .add-form div span {
+  font-size: 18px;
+}
+
+.add .add-form div input[type="text"] {
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: .4vh 0;
+  padding: 1vh .8vw;
+}
+
+.add .add-form div.checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.add .add-form div.checkbox label {
+  margin-left: .5vw;
+}
+
+.add .add-form button {
+  border: none;
+  border-radius: 5px;
+  padding: 1vh 1vw;
+  margin: 1vh .8vw;
+  background-color: transparent;
+  color: #3399FF;
+  font-size: 17px;
+  font-weight: 600;
+  transition: 
+    background-color .6s ease-in-out,
+    color .4s ease-in-out;
+}
+
+.add .add-form button:hover {
+  background-color: #3399FF;
+  color: #FFFFFF;
+}
+
+.add .add-form span.warning {
+  margin-inline: auto;
+  color: #3399FF;
+}
+
+@media screen and (max-width: 1024px) {
+  .add .add-form {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .add .add-form {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .add .add-form {
+    width: 90%;
+  }
+}

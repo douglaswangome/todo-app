@@ -1,0 +1,113 @@
+.edit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: brightness(.3);
+  transition: margin-left 1s ease-in-out;
+  z-index: 2;
+}
+
+.edit.inactive {
+  margin-left: -100%;
+}
+
+.edit .edit-form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  background-color: #FFFFFF;
+  padding: 1vh 1vw;
+}
+
+.edit .edit-form span.title {
+  font-family: "Courgette";
+  font-size: 40px;
+  margin-inline: auto;
+}
+
+.edit .edit-form div {
+  display: flex;
+  flex-direction: column;
+  margin-block: .6vh;
+  padding: 1vh 1vw;
+}
+
+.edit .edit-form div span {
+  font-size: 18px;
+}
+
+.edit .edit-form div input[type="text"] {
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: .4vh 0;
+  padding: 1vh .8vw;
+  transition: box-shadow .4s ease-in-out;
+}
+
+.edit .edit-form div input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 -1px 0 0 #97979A; /* Border top */
+  box-shadow: 1px 0 0 0 #97979A; /* Border right */
+  box-shadow: 0 1px 0 0 #97979A; /* Border bottom */
+  box-shadow: -1px 0 0 0 #97979A; /* Border left */
+  box-shadow: 0 0 0 2px #97979A; /* All the borders by using the spread properties */
+}
+
+.edit .edit-form div.checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.edit .edit-form div.checkbox label {
+  margin-left: .5vw;
+}
+
+.edit .edit-form button {
+  border: none;
+  border-radius: 5px;
+  padding: 1vh 1vw;
+  margin: 1vh .8vw;
+  background-color: transparent;
+  color: #3399FF;
+  font-size: 17px;
+  font-weight: 600;
+  transition: 
+    background-color .6s ease-in-out,
+    color .4s ease-in-out;
+}
+
+.edit .edit-form button:hover {
+  background-color: #3399FF;
+  color: #FFFFFF;
+}
+
+.edit .edit-form span.warning {
+  margin-inline: auto;
+  color: #3399FF;
+}
+
+@media screen and (max-width: 1024px) {
+  .edit .edit-form {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .edit .edit-form {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .edit .edit-form {
+    width: 90%;
+  }
+}

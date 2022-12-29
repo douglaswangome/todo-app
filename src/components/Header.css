@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+.header {
+  background-color: #3399FF;
+  color: #FFFFFF;
+  font-family: 'Cookie';
+  font-size: 48px;
+  padding-block: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2vh;
+}
+
+.header img {
+  height: 10%;
+  object-fit: contain;
+  margin-right: .8vw;
+}
