@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import './Add.css';
 import sampleTodos from "../../sampletodos";
 
@@ -48,6 +48,12 @@ const Add = (props) => {
       setShowWarning(false);
     }
   }
+
+  useEffect(() => {
+    setTimeout(() => {
+      showWarning && setShowWarning(false);
+    }, 3000);
+  }, [showWarning]);
 
   return (
     <div 
