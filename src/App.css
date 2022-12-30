@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 1vh 1vw;
 }
 
 .app .add-todo {
@@ -13,6 +12,6 @@
   border-radius: 5px;
   font-weight: 700;
   padding: 1vh 1vw;
-  margin-right: 0;
+  margin-right: 2vw;
   margin-left: auto;
 }

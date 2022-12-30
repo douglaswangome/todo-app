@@ -22,8 +22,8 @@ const App = () => {
 
   return (
     <>
-    <Header />
     <div className="app">
+      <Header />
       {todo}
       <button className="add-todo" onClick={() => setShowAddModal(true)}>
         <span>Add To-Do</span>

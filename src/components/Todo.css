@@ -1,8 +1,8 @@
 .todo {
-  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin: 0 2vw;
   padding: 1vh 1vw;
   margin-block: 1vh;
   border-block: 1px solid #CCCCCC;
